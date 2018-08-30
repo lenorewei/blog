@@ -54,9 +54,9 @@
   <% } %>
 </section>
 
-<% if (site.data.projects) { %>
+<!-- <% if (site.data.projects) { %>
 <section id="projects">
-  <span class="h1"><a href="<%- url_for(theme.projects_url) %>"><%= __('index.projects') %></a></span>
+  <span class="h1"><%= __('index.projects') %></span>
   <ul class="project-list">
     <% for(var obj in site.data.projects){ %>
       <li class="project-item">
@@ -65,4 +65,15 @@
     <% } %>
   </ul>
 </section>
-<% } %>
+<% } %> -->
+
+<section id="friend-zone">
+  <span class="h1">友链</span>
+  <ul class="friend-zone-list">
+    <% for(var obj in site.data.friend){ %>
+      <li class="project-item">
+        <a href="<%= site.data.friend[obj].url %>"><%= site.data.friend[obj].name %></a>
+      </li>
+    <% } %>
+  </ul>
+</section>
